@@ -1,0 +1,25 @@
+{
+  "name": "testing-nodejs-workshop",
+  "version": "0.1.0",
+  "description": "forloop workshop material for testing nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyg101/testing-nodejs.git"
+  },
+  "keywords": [
+    "node",
+    "testing",
+    "javascript",
+    "jest"
+  ],
+  "author": "Ebuka Hills",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flyg101/testing-nodejs/issues"
+  },
+  "homepage": "https://github.com/flyg101/testing-nodejs#readme"
+}
