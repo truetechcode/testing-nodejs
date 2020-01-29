@@ -4,7 +4,26 @@
   "description": "forloop workshop material for testing nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node index.js",
+    "test": "jest",
+    "build": "babel"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.8.3",
+    "nodemon": "^2.0.2"
   },
   "repository": {
     "type": "git",
@@ -21,5 +40,17 @@
   "bugs": {
     "url": "https://github.com/flyg101/testing-nodejs/issues"
   },
-  "homepage": "https://github.com/flyg101/testing-nodejs#readme"
+  "homepage": "https://github.com/flyg101/testing-nodejs#readme",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
 }
