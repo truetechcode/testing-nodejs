@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jest",
+    "test": "jest --watchAll",
     "build": "babel"
   },
   "dependencies": {
@@ -23,7 +23,11 @@
   },
   "devDependencies": {
     "@babel/register": "^7.8.3",
-    "nodemon": "^2.0.2"
+    "babel-jest": "^25.1.0",
+    "faker": "^4.1.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
   },
   "repository": {
     "type": "git",

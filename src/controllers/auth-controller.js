@@ -19,7 +19,7 @@ export default {
       password: await hashPassword(password),
     });
 
-    return res.json({ ...buildUserResponse(user), message: 'Regitered Succesfully!' });
+    return res.json({ ...buildUserResponse(user), message: 'Regsitered Succesfully!' });
   },
 
   async login(req, res) {
@@ -38,7 +38,7 @@ export default {
     return res.json({ ...buildUserResponse(user), message: 'Login Successful!' });
   },
 
-  async getMe(req, res, next) {
+  async getMe(req, res) {
     const { id } = req.user;
     const user = await DB.users.findById(id);
     return res.json(buildUserResponse(user));

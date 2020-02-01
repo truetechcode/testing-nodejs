@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 const JWT_SECRET = process.env.JWT_SECRET || 'k2hf504mcxw78kdfy439dhgcfew6';
 
 export function isValidPassword(password) {
-  return password.length > 6;
+  return password.length >= 6;
 }
 
 export async function hashPassword(password = '') {
@@ -15,9 +15,9 @@ export async function comparePassword(password = '', hash = '') {
   return await bcrypt.compare(password, hash); // => (Boolean)
 }
 
-export function jwtSign(data = {}) {
-  return jwt.sign(data, JWT_SECRET, {
-    expiresIn: '1 hour',
+export function jwtSign(data = {}, expiry = '1 hour') {
+  return jwt.sign({ ...data }, JWT_SECRET, {
+    expiresIn: expiry,
   });
 }
 

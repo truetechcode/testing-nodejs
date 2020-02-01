@@ -1,15 +1,17 @@
 import lodash from 'lodash';
 
-class User {
+export class User {
   constructor(data) {
-    this.id = data.id;
+    this.id = data.id || users.length + 1;
     this.username = data.username;
     this.name = data.name || '';
     this.created = new Date().toISOString();
 
     this.getPassword = function() {
-      return data.password;
+      return data.password || '$2a$10$4ZoiugORb5z698zjfTg0FOcqD68BR6.ZAEDpYNVQ7YuNbnsSrNKTO';
     };
+
+    return this;
   }
 }
 
@@ -35,7 +37,7 @@ export default {
   create({ id, username, name, password }) {
     return new Promise(resolve => {
       const user = new User({
-        id: id || users.length + 1,
+        id,
         username,
         name,
         password,
